@@ -61,17 +61,17 @@ public class MyCalendar {
 
     public void printYear(int year) {
         String[][][] months = year(year);
-
+        System.out.printf("%65s%n", year);
         for (int i = 0; i < 12; i = i + 4) {
-            gregorianCalendar.set(Calendar.MONTH,i);
-            for (int monthNumber=i;monthNumber<i+4;monthNumber++) {
-                System.out.printf( "%24s",gregorianCalendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.US));
-                System.out.printf("%3s"," ");
-                gregorianCalendar.roll(Calendar.MONTH,1);
+            gregorianCalendar.set(Calendar.MONTH, i);
+            for (int monthNumber = i; monthNumber < i + 4; monthNumber++) {
+                System.out.printf("%24s", gregorianCalendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.US));
+                System.out.printf("%3s", " ");
+                gregorianCalendar.roll(Calendar.MONTH, 1);
             }
             System.out.println();
-                      for (int row = 0; row < 7; row++) {
-                for (int month = i; month < i+4; month++) {
+            for (int row = 0; row < 7; row++) {
+                for (int month = i; month < i + 4; month++) {
 
                     for (int col = 0; col < 7; col++) {
                         System.out.printf("%4s", months[month][row][col]);

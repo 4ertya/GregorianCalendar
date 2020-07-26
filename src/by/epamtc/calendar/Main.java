@@ -11,8 +11,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-      MyCalendar myCalendar=new MyCalendar();
-      myCalendar.printYear(2020);
+        MyCalendar myCalendar = new MyCalendar();
+        myCalendar.printMonth(2020, 7);
+        myCalendar.printYear(2020);
 
     }
 
